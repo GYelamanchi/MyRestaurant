@@ -1,10 +1,12 @@
-<div style="text-align: center"><h1>Menu Items</h1>
-<ul>
+<div style="text-align: center;"><h1>Menu Items</h1>
+
+  <div class="list"><ul>
   <li *ngFor="let item of items">
     <br>
     {{item.name}}
-    <span>{{item.price}}</span><br>
-    <span>{{item.description}}</span>
+    <span style="font-size: 15px">{{item.price}}</span><br>
+    <span style="font-style: italic; font-size: 10px">{{item.description}}</span>
   </li>
 </ul>
+  </div>
 </div>
