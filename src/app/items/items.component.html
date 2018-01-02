@@ -1,7 +1,10 @@
 <div style="text-align: center"><h1>Menu Items</h1>
 <ul>
   <li *ngFor="let item of items">
-    <span class="badge"> {{item.id}}</span>{{item.name}}
+    <br>
+    {{item.name}}
+    <span>{{item.price}}</span><br>
+    <span>{{item.description}}</span>
   </li>
 </ul>
 </div>
