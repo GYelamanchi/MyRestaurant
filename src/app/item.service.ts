@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 export class ItemService {
 
   constructor(private http: HttpClient) { }
-  private itemsUrl = 'api/items';
+  private itemsUrl = 'http://localhost:8080/items';
 
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.itemsUrl);

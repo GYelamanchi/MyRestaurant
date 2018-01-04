@@ -4,7 +4,7 @@
   <li *ngFor="let item of items">
     <br>
     {{item.name}}
-    <span style="font-size: 15px">{{item.price}}</span><br>
+    <span style="font-size: 15px"><b>${{item.price}}</b></span><br>
     <span style="font-style: italic; font-size: 10px">{{item.description}}</span>
   </li>
 </ul>
