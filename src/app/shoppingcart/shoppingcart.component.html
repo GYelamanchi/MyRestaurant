@@ -1,9 +1,9 @@
 <div>
   <p>This is to display cartitems</p>
-  <ul>
+  <ul style="list-style-type: none">
     <li *ngFor="let cartItem of cartItems">
-      {{cartItem.item.id}}
-      <span>{{cartItem.qty}}</span>
+      Item:{{cartItem.item.id}}
+      <span style="float: right">Qty:{{cartItem.qty}}</span>
     </li>
   </ul>
 </div>
