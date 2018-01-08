@@ -9,6 +9,9 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
 import {ItemService} from './item.service';
+import {CartService} from './cart.service';
+import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 
@@ -19,15 +22,17 @@ import {ItemService} from './item.service';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     /*HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )*/
   ],
   declarations: [
     AppComponent,
-    ItemsComponent
+    ItemsComponent,
+    ShoppingcartComponent
   ],
-  providers: [ItemService],
+  providers: [CartService,ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

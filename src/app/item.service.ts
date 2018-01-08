@@ -6,10 +6,13 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ItemService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
+
   private itemsUrl = 'http://localhost:8080/items';
 
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.itemsUrl);
   }
+
 }
