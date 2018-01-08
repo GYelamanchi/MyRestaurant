@@ -8,3 +8,7 @@ div h1{
   color: brown;
   background-color: beige;
 }
+ul{
+  display: inline-block;
+  list-style-type: none;
+}

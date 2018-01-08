@@ -18,7 +18,7 @@ export class ShoppingcartComponent implements OnInit {
   }
 
   private getCart():void{
-    //this.cartItems = this.cartService.getShoppingCart();
+    this.cartItems = this.cartService.getShoppingCart().getCartItems();
   }
 
 }

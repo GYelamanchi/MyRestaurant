@@ -2,10 +2,16 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}
-   <div style="text-align: right"> <button><a routerLink="/shoppingcart">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></button></div>
+    <div style="text-align: left">
+      <ul style="display: inline-block">
+        <li>Home</li>
+        <li>Items</li>
+        <li> <a routerLink="/shoppingcart">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+    </div>
   </h1>
   <app-items></app-items><br>
-  <!--<router-outlet></router-outlet>-->
+  <router-outlet></router-outlet>
 
   </div>
 

@@ -30,4 +30,7 @@ export class ShoppingCart{
     })
     return itemExists;
   }
+  public getCartItems():CartItem[]{
+    return this.cartItems;
+  }
 }
