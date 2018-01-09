@@ -12,6 +12,7 @@ import {ItemService} from './item.service';
 import {CartService} from './cart.service';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -30,7 +31,8 @@ import { AppRoutingModule } from './/app-routing.module';
   declarations: [
     AppComponent,
     ItemsComponent,
-    ShoppingcartComponent
+    ShoppingcartComponent,
+    HomeComponent
   ],
   providers: [CartService,ItemService],
   bootstrap: [AppComponent]
