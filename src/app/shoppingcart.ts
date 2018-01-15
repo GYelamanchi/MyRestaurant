@@ -15,8 +15,8 @@ export class ShoppingCart{
       cartItem = new CartItem();
       cartItem.item = item;
       cartItem.qty = 1;
-      this.cartItems.push(cartItem);
     }
+    this.cartItems.push(cartItem);
   }
 
   private IncrementQtyIfItemExists(itemId : String):boolean{

@@ -4,12 +4,14 @@ import {RouterModule, Routes} from '@angular/router';
 import {ShoppingcartComponent} from './shoppingcart/shoppingcart.component';
 import {ItemsComponent} from './items/items.component';
 import {HomeComponent} from './home/home.component';
+import {OrderComponent} from './order/order.component';
 
 const routes:Routes=[
   { path: 'shoppingcart', component:ShoppingcartComponent  },
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
   { path: 'menu', component:ItemsComponent  },
-  { path: 'home', component:HomeComponent  }
+  { path: 'home', component:HomeComponent  },
+  { path: 'order', component:OrderComponent  }
 
 ]
 

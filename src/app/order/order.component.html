@@ -1,0 +1,12 @@
+<div>
+  <h1>Order details are displayed below</h1>
+  <div>
+      <li *ngFor ="let cartItem of order.items">
+        {{cartItem.item.price}}
+        <span>{{cartItem.qty}}</span>
+        <span> Subtotal: {{cartItem.item.price*cartItem.qty}}</span>
+      </li>
+      <li>Date:{{order.date|date:'short'}}</li>
+      <li *ngIf="order.total">Total:{{order.total}}</li>
+  </div>
+</div>
