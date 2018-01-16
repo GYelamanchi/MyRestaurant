@@ -9,4 +9,5 @@
       <li>Date:{{order.date|date:'short'}}</li>
       <li *ngIf="order.total">Total:{{order.total}}</li>
   </div>
+  <button (click)="confirmOrder()">Confirm</button>
 </div>

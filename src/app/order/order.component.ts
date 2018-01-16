@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Order} from '../order';
 import {CartService} from '../cart.service';
-import {CartItem} from '../cartitem';
+import {OrderService} from '../order.service';
 
 @Component({
   selector: 'app-order',
@@ -10,7 +10,7 @@ import {CartItem} from '../cartitem';
 })
 export class OrderComponent implements OnInit {
   order:Order;
-  constructor(private cartService:CartService) {
+  constructor(private cartService:CartService, private orderService:OrderService) {
   }
 
   ngOnInit() {
@@ -28,6 +28,9 @@ export class OrderComponent implements OnInit {
     if(total) {
       return total;
     }
+  }
+  public confirmOrder(): void{
+    this.orderService.saveOrder(this.order);
   }
 
 }

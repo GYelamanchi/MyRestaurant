@@ -14,6 +14,7 @@ import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
+import {OrderService} from './order.service';
 
 
 
@@ -36,7 +37,7 @@ import { OrderComponent } from './order/order.component';
     HomeComponent,
     OrderComponent
   ],
-  providers: [CartService,ItemService],
+  providers: [CartService,ItemService,OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
