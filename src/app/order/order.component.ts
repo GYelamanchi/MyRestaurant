@@ -10,8 +10,11 @@ import {OrderService} from '../order.service';
 })
 export class OrderComponent implements OnInit {
   order:Order;
+  private orderConfirmed:boolean=false;
+  private orderId: String;
   constructor(private cartService:CartService, private orderService:OrderService) {
   }
+
 
   ngOnInit() {
     this.order=new Order();
@@ -30,7 +33,7 @@ export class OrderComponent implements OnInit {
     }
   }
   public confirmOrder(): void{
-    this.orderService.saveOrder(this.order);
+    this.orderService.saveOrder(this.order).subscribe(orderId=>{this.orderId=orderId});
   }
 
 }

@@ -1,4 +1,4 @@
-<div>
+<!--<div>
   <ul style="list-style-type: none">
     <li *ngFor="let cartItem of cartItems">
       Item:<b>{{cartItem.item.id}}</b>
@@ -6,4 +6,18 @@
     </li>
   </ul>
   <button><a routerLink="/order">Checkout</a></button>
-</div>
+</div>-->
+<table *ngIf="cartItems.length; else display">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Quantity</th>
+  </tr>
+  <tr *ngFor="let cartItem of cartItems">
+    <td>{{cartItem.item.id}}</td>
+    <td>{{cartItem.item.name}}</td>
+    <td>{{cartItem.qty}}</td>
+  </tr>
+</table>
+<ng-template #display><b>Your cart is empty</b></ng-template><br>
+<button><a routerLink="/order">Checkout</a></button>

@@ -1,6 +1,6 @@
-<div>
+<div [hidden]="orderId">
   <h1>Order details are displayed below</h1>
-  <div>
+  <div >
       <li *ngFor ="let cartItem of order.items">
         {{cartItem.item.price}}
         <span>{{cartItem.qty}}</span>
@@ -11,3 +11,4 @@
   </div>
   <button (click)="confirmOrder()">Confirm</button>
 </div>
+<span [hidden]="!orderId">Your Order "{{orderId}}" is confirmed</span>

@@ -5,13 +5,15 @@ import {ShoppingcartComponent} from './shoppingcart/shoppingcart.component';
 import {ItemsComponent} from './items/items.component';
 import {HomeComponent} from './home/home.component';
 import {OrderComponent} from './order/order.component';
+import {OrdersComponent} from './orders/orders.component';
 
 const routes:Routes=[
   { path: 'shoppingcart', component:ShoppingcartComponent  },
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
   { path: 'menu', component:ItemsComponent  },
   { path: 'home', component:HomeComponent  },
-  { path: 'order', component:OrderComponent  }
+  { path: 'order', component:OrderComponent  },
+  { path: 'orders', component:OrdersComponent  }
 
 ]
 

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
 import {OrderService} from './order.service';
+import { OrdersComponent } from './orders/orders.component';
 
 
 
@@ -35,7 +36,8 @@ import {OrderService} from './order.service';
     ItemsComponent,
     ShoppingcartComponent,
     HomeComponent,
-    OrderComponent
+    OrderComponent,
+    OrdersComponent
   ],
   providers: [CartService,ItemService,OrderService],
   bootstrap: [AppComponent]

@@ -3,3 +3,16 @@ div{
   width:50%;
   margin: auto;
 }
+table{
+  width:50%;
+  margin:10px auto;
+
+}
+table, th,td{
+  border:1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+td{
+  background-color: greenyellow;
+}
