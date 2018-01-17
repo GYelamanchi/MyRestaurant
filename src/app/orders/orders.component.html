@@ -1,7 +1,14 @@
 <div>
-  <ul>
-    <li *ngFor="let order of orders">
-      {{order.id}}
-    </li>
-  </ul>
+  <table>
+    <tr>
+      <th>Order Id</th>
+      <th>Item count</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngFor="let order of orders">
+      <td>{{order.orderId}}</td>
+      <td>{{order.items.length}}</td>
+      <td>{{order.total}}</td>
+    </tr>
+  </table>
 </div>
