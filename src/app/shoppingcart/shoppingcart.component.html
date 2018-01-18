@@ -7,7 +7,8 @@
   </ul>
   <button><a routerLink="/order">Checkout</a></button>
 </div>-->
-<table *ngIf="cartItems.length; else display">
+<div *ngIf="cartItems.length; else display">
+<table >
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -19,5 +20,6 @@
     <td>{{cartItem.qty}}</td>
   </tr>
 </table>
-<ng-template #display><b>Your cart is empty</b></ng-template><br>
 <button><a routerLink="/order">Checkout</a></button>
+</div>
+<ng-template #display><b>Your cart is empty</b></ng-template><br>

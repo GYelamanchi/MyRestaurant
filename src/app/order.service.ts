@@ -10,7 +10,7 @@ export class OrderService {
   }
 
   private orderUrl = 'http://localhost:8080/order';
-  private ordersUrl = 'http://localhost:8080/order/orders';
+  //private ordersUrl = 'http://localhost:8080/order/orders';
 
 
   public saveOrder(order: Order): Observable<String> {
@@ -18,6 +18,6 @@ export class OrderService {
   }
 
   public getOrders():Observable<Order[]> {
-  return this.http.get<Order[]>(this.ordersUrl);
+  return this.http.get<Order[]>(this.orderUrl);
   }
 }

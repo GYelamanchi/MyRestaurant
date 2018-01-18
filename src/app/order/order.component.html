@@ -1,14 +1,41 @@
-<div [hidden]="orderId">
+<!--<div [hidden]="orderId">
   <h1>Order details are displayed below</h1>
   <div >
+    <ul>
       <li *ngFor ="let cartItem of order.items">
-        {{cartItem.item.price}}
+        {{cartItem.item.name}}
+        <span>{{cartItem.item.price}}</span>
         <span>{{cartItem.qty}}</span>
         <span> Subtotal: {{cartItem.item.price*cartItem.qty}}</span>
       </li>
       <li>Date:{{order.date|date:'short'}}</li>
       <li *ngIf="order.total">Total:{{order.total}}</li>
+    </ul>
   </div>
   <button (click)="confirmOrder()">Confirm</button>
 </div>
 <span [hidden]="!orderId">Your Order "{{orderId}}" is confirmed</span>
+-->
+
+<div [hidden]="orderId">
+  <div style="border: 1px solid black; width:40%; margin: auto">
+  <div style="display: block; background-color: antiquewhite; padding: 10px">
+    <label style="width:40%; margin: 0">Name</label>
+    <label style="width:20%; margin: 0">Qty</label>
+    <label style="width:20%; margin: 0">Price</label>
+  </div>
+  <div *ngFor="let cartItem of order.items" style='display:block; border-bottom: 1px dotted red'>
+    <div style="width:60%;float:left"><strong>{{cartItem.item.name}}</strong></div>
+    <div style="width:20%;float:left"><strong>{{cartItem.qty}}</strong></div>
+    <div style="width:20%;float:left"><strong>{{cartItem.item.price}}</strong></div>
+  </div>
+    <div style="width: 100%; padding-right: 10px">
+      <label style="width: 70%;">Subtotal</label>
+      <div style="float: right; width: 30%; text-align: right">{{order.total}}</div>
+    </div>
+  </div>
+  <label for="pickup">Pickup Time:</label>
+  <input [(ngModel)]="pickupTime"id="pickup" type="datetime-local">
+  <button (click)="confirmOrder()">Confirm</button>
+</div>
+  <span [hidden]="!orderId">Your Order "{{orderId}}" is confirmed</span>
