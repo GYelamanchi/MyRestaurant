@@ -11,6 +11,7 @@ import {OrderService} from '../order.service';
 export class OrderComponent implements OnInit {
   order:Order;
   pickupTime: Date;
+  errorMessage:String="";
   private orderId: String;
   constructor(private cartService:CartService, private orderService:OrderService) {
   }
@@ -32,12 +33,13 @@ export class OrderComponent implements OnInit {
       return total;
     }
   }
-  public confirmOrder(): void{
+  public confirmOrder(): String{
     if(this.pickupTime<=new Date()){
       this.orderService.saveOrder(this.order).subscribe(orderId=>{this.orderId=orderId});
     }
     else{
-      alert("Please enter future date!");
+      this.errorMessage="Please enter future date!";
+      return this.errorMessage;
     }
   }
 

@@ -37,6 +37,7 @@
   <div>Date:{{order.date|date:'short'}}</div>
   <label for="pickup">Pickup Time:</label>
   <input [(ngModel)]="pickupTime" id="pickup" type="datetime-local">
+  <span [hidden]="!errorMessage">{{errorMessage}}</span><br>
   <button (click)="confirmOrder()">Confirm</button>
 </div>
   <span [hidden]="!orderId">Your Order "{{orderId}}" is confirmed</span>
