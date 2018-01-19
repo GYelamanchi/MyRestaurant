@@ -10,7 +10,7 @@ import {OrderService} from '../order.service';
 })
 export class OrderComponent implements OnInit {
   order:Order;
-  pickupTime: String;
+  pickupTime: Date;
   private orderId: String;
   constructor(private cartService:CartService, private orderService:OrderService) {
   }
@@ -33,8 +33,12 @@ export class OrderComponent implements OnInit {
     }
   }
   public confirmOrder(): void{
-    this.orderService.saveOrder(this.order).subscribe(orderId=>{this.orderId=orderId});
-    console.log(this.pickupTime);
+    if(this.pickupTime<=new Date()){
+      this.orderService.saveOrder(this.order).subscribe(orderId=>{this.orderId=orderId});
+    }
+    else{
+      alert("Please enter future date!");
+    }
   }
 
 }
